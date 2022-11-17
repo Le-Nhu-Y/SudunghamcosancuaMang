@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = 'The Quick Brown Fox';
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for(let i=0; i<str.length; i++)
+    {
+        if(UPPER.indexOf(str[i]) !== -1)
+        { //indexOf sẽ tìm kiếm một phần tử trong mảng dựa vào giá trị của phần tử, hàm sẽ trả về vị trị( khóa) của phần tử nếu tìm thấy và trả về -1 nếu không tìm thấy.
+            result.push(str[i].toLowerCase()); // thêm phần tử vào vị trí cuối cùng bằng cách sử dụng hàm push()
+        }   //toLowerCase() sẽ chuyển đổi một chuỗi có chứ kí tự in hoa thành một chuỗi in thường
+        else if(LOWER.indexOf(str[i]) !== -1)
+        {
+            result.push(str[i].toUpperCase());
+        }   //toUpperCase() sẽ chuyển đổi một chuỗi có chứ kí tự in thường thành một chuỗi in Hoa
+        else
+        {
+            result.push(str[i]);
+        }
+    }
+    document.write(result.join(''));
+    // join('')nối các phần tử của mảng lại với nhau thành một chuỗi.
+</script>
+</body>
+</html>
